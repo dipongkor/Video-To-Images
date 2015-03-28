@@ -1,0 +1,41 @@
+﻿#videoConverterTools {
+    
+    
+}
+#videoContainer {
+   display:none;
+   
+}
+
+#videoViewer
+{
+     border:2px solid #1b6542;
+     margin-bottom:5px;
+     background-color:#c7b299;
+     padding:2px 2px 0px 2px;
+}
+
+#videoMain {
+  width: 100%    !important;
+  height: auto   !important;
+}
+.photoDiv {
+    margin-bottom: 5px;
+    border: 2px solid #1b6542;
+    background-color: #c7b299;
+    padding:2px 2px 0px 2px;
+    border-radius:3px;
+}
+.convertedImage
+{
+    width: 100%    !important;
+}
+#convertLoader{
+    background-color: #ffffff;
+    text-align: center;
+    padding: 2px;
+    display: none;
+    border:2px solid #1b6542;
+    border-radius:3px;
+    margin-bottom: 5px;
+}

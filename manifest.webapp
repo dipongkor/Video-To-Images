@@ -1,0 +1,39 @@
+{
+    "name": "Video To Images",
+    "type": "privileged",
+    "description": "Convert your video to images and then save or share",
+    "launch_path": "/Index.html",
+    "version": "2.0",
+    "developer": {
+        "name": "Atish Kumar Dipongkor",
+        "url": "http://careers.stackoverflow.com/atish"
+    },
+    "icons": {
+        "128": "/images/128.png",
+        "512": "/images/512.png"
+    },
+    "installs_allowed_from": [
+        "*"
+    ],
+    "orientation": "portrait",
+    "default_locale": "en",
+    "permissions": {
+        "device-storage:sdcard": {
+            "access": "readwrite",
+            "description": "Save photos in sd card"
+        },
+    "desktop-notification": {
+      "description": "To show notifications"
+    }
+    },
+    "activities": {
+       "share": {
+             "href":"./Index.html",
+             "filters": {
+               "type": ["video/*"]
+             },
+             "disposition": "window",
+             "returnValue": true
+           }
+      }
+}

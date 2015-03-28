@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/ThemeVideoToImage.min.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile.structure-1.4.2.css" rel="stylesheet" />
+    <link href="Content/jquery.mobile.icons-1.4.2.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/jquery.mobile-1.4.2.min.js"></script>
+    <script src="Scripts/videoToImage.js"></script>
+</head>
+<body>
+    <div data-role="page" id="homePage">
+        <div data-role="header" data-position="fixed">
+            <a data-role="button" href="" data-transition="slide" data-icon="gear" style="display: none">Settings</a>
+            <h1>Video To Images</h1>
+            <a data-role="button" id="settingsButtonId" data-transition="slide" data-icon="gear" data-iconpos="notext">Settings</a>
+        </div>
+        
+        <div data-role="content">
+
+            <div id="convertLoader">
+                <img src="images/loader.gif"/>
+                <p style="margin: 0">Converting...</p>
+            </div>
+           
+           <div id="videoViewer">
+            <div id="videoContainer">
+               
+            </div>
+
+            <div class="ui-grid-a" id="videoConverterTools">
+                <div class="ui-block-a">
+                    <a data-role="button" id="changeVideo" data-transition="slide" data-icon="video">Browse</a>
+                </div>
+                <div class="ui-block-b">
+                    <a data-transition="slide" data-icon="edit" data-role="button" id="startConverting">Start</a>
+                </div>
+            </div>
+           </div>
+
+            <canvas id="thecanvas" style="display: none"></canvas>
+
+            <div id="imageContainer">
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div data-role="page" id="settingsPage">
+        <div data-role="header">
+            <a data-role="button" data-rel="back" data-icon="back">Back</a>
+            <h1>Settings</h1>
+            <a data-role="button" id="saveSettings" data-icon="check">
+                Save</a>
+        </div>
+        <div data-role="content">
+            <form>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="fieldcontain">
+                        <label for="imageWidth">
+                            Image Width (px)</label>
+                        <input type="number" id="imageWidth" value="0" />
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label for="imageHeight">
+                           Image Height (px)</label>
+                        <input type="number" id="imageHeight" value="0" />
+                    </li>
+
+                    <li data-role="fieldcontain">
+                        <label for="aspectRatio">
+                            Maintain Ratio</label>
+                        <input type="checkbox" id="aspectRatio" checked />
+                    </li>
+
+                    </ul>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
